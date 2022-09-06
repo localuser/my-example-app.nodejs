@@ -1,0 +1,79 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:eu-west-1:500158761876:task-definition/mytask:1",
+    "containerDefinitions": [
+        {
+            "name": "charge",
+            "image": "500158761876.dkr.ecr.eu-west-1.amazonaws.com/myrepo/myapp:latest",
+            "cpu": 0,
+            "links": [],
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 0,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "entryPoint": [],
+            "command": [],
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "secrets": [],
+            "dnsServers": [],
+            "dnsSearchDomains": [],
+            "extraHosts": [],
+            "dockerSecurityOptions": [],
+            "dockerLabels": {},
+            "ulimits": [],
+            "systemControls": []
+        }
+    ],
+    "family": "mytask",
+    "executionRoleArn": "arn:aws:iam::500158761876:role/ecsTaskExecutionRole",
+    "networkMode": "bridge",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EXTERNAL",
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2022-09-06T12:42:35.606Z",
+    "registeredBy": "arn:aws:sts::500158761876:assumed-role/AWSReservedSSO_AdministratorAccess_f71c738704a469cb/jarrod@bulksms.com",
+    "tags": [
+        {
+            "key": "ecs:taskDefinition:createdFrom",
+            "value": "ecs-console-v2"
+        },
+        {
+            "key": "ecs:taskDefinition:stackId",
+            "value": "arn:aws:cloudformation:eu-west-1:500158761876:stack/ECS-Console-V2-TaskDefinition-dbedd79d-05fd-4aa6-abbe-fcb3f594e7f2/5fa1e390-2de1-11ed-9246-0a8b2fcd5043"
+        }
+    ]
+}
